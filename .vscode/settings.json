@@ -1,29 +1,29 @@
-
 {
   // config related to code formatting
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "[javascript]": {
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "javascript.validate.enable": true, //disable all built-in syntax checking
   "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.tslint": true,
-      "source.organizeImports": true
+    "source.fixAll.eslint": "always",
+    "source.fixAll.tslint": "always",
+    "source.organizeImports": "always"
   },
   "eslint.alwaysShowStatus": true,
   // emmet
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
-      "javascript": "javascriptreact"
+    "javascript": "javascriptreact"
   },
-  "prettier.tabWidth": 4,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
   "tailwindCSS.classAttributes": [
     // ...
     "style"

@@ -1,15 +1,21 @@
-import { Text, View } from "react-native";
+import Splash from '@/components/splash'
+import { useAuthState } from '@/libs/global-state/store'
+import { Redirect } from 'expo-router'
+import React, { useEffect } from 'react'
 
 export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-  );
+  const {isLoading,checkAuth,isAuthenticated} = useAuthState()
+  useEffect(() => {
+    checkAuth()
+  }
+  , [])
+
+  
+  if(isLoading){
+    return <Splash/>
+  }else if(isAuthenticated){
+    return <Redirect href={'/(tabs)/home'}/>
+  }else{
+    return <Redirect href={'/onboarding'}/>
+  } 
 }
