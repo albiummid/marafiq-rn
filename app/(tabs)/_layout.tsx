@@ -2,7 +2,7 @@ import { colors } from '@/constants/colors';
 import tw from '@/libs/tw';
 import { Feather } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
-import { Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 
 export default function TabLayout() {
  
@@ -11,6 +11,10 @@ export default function TabLayout() {
       screenOptions={{
         headerShown:false,
         tabBarActiveTintColor: colors.green600,
+        tabBarActiveBackgroundColor:"transparent",
+         tabBarButton: (props) => (
+          <Pressable {...props} android_ripple={{ color:'transparent'}} />
+        ),
         tabBarInactiveTintColor: 'gray',
         tabBarStyle: tw`py-2 h-14 px-5`,
         // tabBarLabelPosition:'beside-icon',    
