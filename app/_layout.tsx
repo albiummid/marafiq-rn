@@ -1,10 +1,14 @@
-import { Stack } from "expo-router";
+import ProviderWrapper from "@/components/layout/provider-wrapper";
+import { Stack, usePathname } from "expo-router";
 
 export default function RootLayout() {
+  const path = usePathname()
+  const excludeHeaderList = ['/notifications']
   return (
-    <Stack screenOptions={{headerShown: false}}>
+    <ProviderWrapper>
+      <Stack screenOptions={{headerShown:false}}>
     <Stack.Screen name="(tabs)"/>
-    <Stack.Screen name="onboarding"/>
   </Stack>
+    </ProviderWrapper>
   );
 }

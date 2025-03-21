@@ -14,7 +14,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
     "source.fixAll.tslint": "always",
-    "source.organizeImports": "always"
+    "source.organizeImports": "explicit"
   },
   "eslint.alwaysShowStatus": true,
   // emmet
@@ -33,6 +33,7 @@
     ["tw.style\\(([^)]*)\\)", "'([^']*)'"]
   ],
   "[typescriptreact]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

@@ -7,9 +7,7 @@ export default function ProviderWrapper({children}:PropsWithChildren) {
   return (
     <>
     <QueryClientProvider client={queryClient}>
-      <>
-      {children}
-      </>
+    {children}
     </QueryClientProvider>
     </>
   )
